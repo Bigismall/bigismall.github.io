@@ -1,2 +1,2 @@
 # Bigismall.github.io
-GitHub.io website   
+See more: https://bigismall.github.io/
