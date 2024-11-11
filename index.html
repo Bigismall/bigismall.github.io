@@ -1,50 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SVG Railroad demo</title>
-  <link rel="stylesheet"
-        href="demo.css" />
-  <script type="text/javascript"
-          src="demo.js"
-          defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pumpkin.min.css">
+    <title>Bigismall</title>
 </head>
-<body>
-<div class="rail__container">
-  <svg version="1.1"
-       xmlns="http://www.w3.org/2000/svg"
-       xmlns:xlink="http://www.w3.org/1999/xlink"
-       preserveAspectRatio="xMidYMid meet"
-       viewBox="0 0 640 640"
-       width="640"
-       height="640"
-       class="rail__canvas">
-    <defs>
-      <filter id="double">
-        <feMorphology in="SourceGraphic"
-                      result="a"
-                      operator="dilate"
-                      radius="2" />
-        <feComposite in="SourceGraphic"
-                     in2="a"
-                     result="xx"
-                     operator="xor" />
-      </filter>
-      <path d="M631 41C554 167 507 246 488 278C448 344 377 386 300 390C243 392 198 381 164 356C121 325 121 281 166 222C191 189 226 166 266 157C293 150 272 155 289 151C349 136 409 174 422 235C426 252 422 271 410 290C353 379 143 380 268 195C351 72 280 29 54 67"
-            id="rail"></path>
-      <polygon points="-10 -10,10 -10,10 10,-10 10"
-               id="train" />
-    </defs>
-    <use xlink:href="#rail"
-         class="rail_backing"></use>
-    <use xlink:href="#rail"
-         class="rail_track"
-         filter="url(#double)"></use>
-    <use xlink:href="#train"
-         class="rail_train js-train-1"></use>
-    <use xlink:href="#train"
-         class="rail_train js-train-2"></use>
-  </svg>
-</div>
+<body class="container">
+<header>
+    <h1>Bigismall</h1>
+</header>
+<main>
+    <h2>Hack-day projects</h2>
+    <ul>
+        <li><a href="https://maponphoto.eu/"
+               title="Add a map to any photo. Use the GPS position stored in the photo (EXIF data) to apply a thumbnail map image to the photo.">Map
+            on photo</a></li>
+        <li><a href="https://maparadar.github.io/"
+               title="ADSB exchange military and civilian aircraft map with some extra photos form Gdańsk Airport">Air
+            traffic map</a></li>
+        <li><a href="https://bigismall.github.io/dualmap/"
+               title="Dual map - synchronize views of different map types side by side">Dual map</a></li>
+        <li><a href="https://bigismall.github.io/ciastopizza/" title="Pizza dough calculator">Pizza dough calculator</a>
+        </li>
+        <li><a href="https://bigismall.github.io/railroads/" title="Railroad simulation creepy engine">Railroad
+            simulation creepy engine</a></li>
+    </ul>
+</main>
+<footer>
+    <p>THX <a href="https://picocss.com/">Pico</a> for CSS</p>
+</footer>
 </body>
 </html>
+
+
